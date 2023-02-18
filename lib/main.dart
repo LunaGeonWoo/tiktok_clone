@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'constants/sizes.dart';
+import 'package:tiktok_clone/screens/sign_up/sign_up_screen.dart';
 
 void main() {
   runApp(const TikTokApp());
@@ -11,14 +11,10 @@ class TikTokApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'TikTok Clone',
-      theme: ThemeData(
-        primaryColor: const Color(0xFFE9435A),
-      ),
-      home: Padding(
-        padding: const EdgeInsets.all(Sizes.size14),
-        child: Container(),
-      ),
-    );
+        title: 'TikTok Clone',
+        theme: ThemeData(
+          primaryColor: const Color(0xFFE9435A),
+        ),
+        home: const SignUpScreen());
   }
 }
