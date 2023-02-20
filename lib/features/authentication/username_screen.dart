@@ -100,6 +100,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
               FormButton(
                 disabled: _username.isEmpty,
                 onPressed: _onNextTap,
+                text: "Next",
               )
             ],
           ),

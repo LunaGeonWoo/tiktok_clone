@@ -105,6 +105,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
               FormButton(
                 disabled: false,
                 onPressed: _onNextTap,
+                text: "Next",
               )
             ],
           ),

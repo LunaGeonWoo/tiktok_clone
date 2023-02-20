@@ -107,6 +107,7 @@ class _EmailScreenState extends State<EmailScreen> {
               FormButton(
                 disabled: !_isEmailValid(),
                 onPressed: _onSubmit,
+                text: "Next",
               )
             ],
           ),

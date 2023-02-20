@@ -5,11 +5,13 @@ import '../../../constants/sizes.dart';
 class FormButton extends StatelessWidget {
   final bool disabled;
   final VoidCallback onPressed;
+  final String text;
 
   const FormButton({
     super.key,
     required this.disabled,
     required this.onPressed,
+    required this.text,
   });
 
   @override
@@ -35,8 +37,8 @@ class FormButton extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
             duration: const Duration(milliseconds: 300),
-            child: const Text(
-              "Next",
+            child: Text(
+              text,
               textAlign: TextAlign.center,
             ),
           ),
