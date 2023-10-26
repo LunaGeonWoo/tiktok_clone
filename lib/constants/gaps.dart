@@ -3,7 +3,6 @@ import 'package:tiktok_clone/constants/sizes.dart';
 
 class Gaps {
   // Vertical Gaps
-  static const v1 = SizedBox(height: Sizes.size1);
   static const v2 = SizedBox(height: Sizes.size2);
   static const v3 = SizedBox(height: Sizes.size3);
   static const v4 = SizedBox(height: Sizes.size4);
