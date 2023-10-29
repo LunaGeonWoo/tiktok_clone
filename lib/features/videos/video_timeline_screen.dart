@@ -9,16 +9,11 @@ class VideoTimelineScreen extends StatefulWidget {
 }
 
 class _VideoTimelineScreenState extends State<VideoTimelineScreen> {
-  int _itemCount = 2;
+  int _itemCount = 1;
 
   final PageController _pageController = PageController();
   final Duration _scrollDuration = const Duration(milliseconds: 250);
   final Curve _scrollCuve = Curves.linear;
-
-  List<Color> colors = [
-    Colors.red,
-    Colors.blue,
-  ];
 
   void _onPageChange(int page) {
     _pageController.animateToPage(
@@ -27,20 +22,16 @@ class _VideoTimelineScreenState extends State<VideoTimelineScreen> {
       curve: _scrollCuve,
     );
     if (page == _itemCount - 1) {
-      _itemCount += 2;
-      colors.addAll([
-        Colors.red,
-        Colors.blue,
-      ]);
+      _itemCount += 1;
       setState(() {});
     }
   }
 
   void _onVideoFinished() {
-    _pageController.nextPage(
-      duration: _scrollDuration,
-      curve: _scrollCuve,
-    );
+    // _pageController.nextPage(
+    //   duration: _scrollDuration,
+    //   curve: _scrollCuve,
+    // );
   }
 
   @override
@@ -51,8 +42,10 @@ class _VideoTimelineScreenState extends State<VideoTimelineScreen> {
       scrollDirection: Axis.vertical,
       onPageChanged: _onPageChange,
       itemCount: _itemCount,
-      itemBuilder: (context, index) =>
-          VideoPost(onVideoFinished: _onVideoFinished),
+      itemBuilder: (context, index) => VideoPost(
+        onVideoFinished: _onVideoFinished,
+        index: index,
+      ),
     );
   }
 }
