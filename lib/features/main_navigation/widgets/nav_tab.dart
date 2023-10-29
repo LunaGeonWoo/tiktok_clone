@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:tiktok_clone/constants/gaps.dart';
 
 class NavTab extends StatelessWidget {
   const NavTab({
@@ -35,7 +33,6 @@ class NavTab extends StatelessWidget {
                 isSeleted ? seletedIcon : icon,
                 color: Colors.white,
               ),
-              Gaps.v5,
               Text(
                 text,
                 style: const TextStyle(
