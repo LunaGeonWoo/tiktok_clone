@@ -9,7 +9,7 @@ class VideoTimelineScreen extends StatefulWidget {
 }
 
 class _VideoTimelineScreenState extends State<VideoTimelineScreen> {
-  int _itemCount = 1;
+  int _itemCount = 2;
 
   final PageController _pageController = PageController();
   final Duration _scrollDuration = const Duration(milliseconds: 250);
@@ -22,16 +22,17 @@ class _VideoTimelineScreenState extends State<VideoTimelineScreen> {
       curve: _scrollCuve,
     );
     if (page == _itemCount - 1) {
-      _itemCount += 1;
+      _itemCount += 2;
       setState(() {});
     }
   }
 
   void _onVideoFinished() {
-    // _pageController.nextPage(
-    //   duration: _scrollDuration,
-    //   curve: _scrollCuve,
-    // );
+    return;
+    _pageController.nextPage(
+      duration: _scrollDuration,
+      curve: _scrollCuve,
+    );
   }
 
   @override
